@@ -1,0 +1,26 @@
+name: PoemChallenge
+version: 1.0.0
+main: com.manus.poemchallenge.PoemChallengePlugin
+api-version: '1.20'
+author: Manus AI
+description: A plugin for timed Chinese poem fill-in-the-blank challenges.
+
+commands:
+  pmans:
+    description: Answer the current poem challenge.
+    usage: /<command> <answer>
+    permission: poem.ans
+    permission-message: You do not have permission to use this command.
+  poem:
+    description: Admin commands for the poem challenge plugin.
+    usage: /<command> admin <subcommand>
+    permission: poem.admin
+    permission-message: You do not have permission to use this command.
+
+permissions:
+  poem.ans:
+    description: Allows players to answer the poem challenge.
+    default: true
+  poem.admin:
+    description: Allows administrators to manage the poem challenge.
+    default: op

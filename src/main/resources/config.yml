@@ -1,0 +1,29 @@
+# 挑战定时器间隔 (单位: 秒)
+challenge-interval: 120
+
+# 古诗 API 地址
+api-url: "https://v2.jinrishici.com/one.json"
+
+# 奖励配置
+reward:
+  min: 10
+  max: 1000
+  # %player% 和 %amount% 为占位符
+  command: "money give %player% %amount%"
+
+# 消息配置 (使用 MiniMessage 格式)
+messages:
+  # 消息前缀，用于所有广播消息
+  prefix: "<gold>【古诗挑战】</gold> "
+  # 挑战格式，%question% 为填空题
+  challenge-format: "<white>%question%</white> <gray>请使用 /pmans <答案> 回答</gray>"
+  # 回答正确消息，%player% 为玩家名，%amount% 为奖励金额
+  correct-answer: "<green>恭喜你，%player%！</green> 回答正确！奖励 <yellow>%amount%</yellow> 已发放。"
+  # 回答错误消息，%player% 为玩家名
+  incorrect-answer: "<red>很遗憾，%player%，</red> 回答错误。别灰心，下次一定！"
+  # 当前没有挑战消息
+  no-active-challenge: "<red>当前没有正在进行的古诗挑战。</red>"
+  # 管理员手动触发成功消息
+  admin-trigger-success: "<green>管理员已手动触发古诗挑战。</green>"
+  # 权限不足消息
+  admin-no-permission: "<red>你没有权限执行此命令。</red>"
